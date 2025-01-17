@@ -11,12 +11,13 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Input } from "@/components/ui/input"
 import { Downloadapp } from "./ui/downloadapp"
+import { ThemeToggle } from "../theme/theme-toggle"
 
 export function SiteHeader() {
   return (
     <header className="w-full border-b">
       <div className="container px-4 md:px-6">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-16 items-center">
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center gap-2">
               <Image
@@ -48,7 +49,7 @@ export function SiteHeader() {
             </Button>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 justify-between">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="sm" className="text-sm">
@@ -86,9 +87,10 @@ export function SiteHeader() {
               </span>
             </Button>
           </div>
+          <ThemeToggle/>
         </div>
 
-        <nav className="flex h-12 items-center gap-6 text-sm">
+        <nav className="flex h-12 items-center gap-6 text-sm justify-center">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="sm" className="gap-2">
